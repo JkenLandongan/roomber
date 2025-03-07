@@ -1,6 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
-import Navbar from './components/Navbar';
 import './App.css'; 
 
 function App() {
@@ -11,14 +10,14 @@ function App() {
         <nav className="navbar">
           <h1 className="logo">ROOMBER</h1>
           <div className="nav-links">
-            <a href="#">About us</a>
-            <a href="#">Team</a>
-            <a href="#">Contact</a>
+            <a onClick={() => document.getElementById('hero').scrollIntoView({ behavior: 'smooth' })}>About us</a>
+            <a onClick={() => document.getElementById('meetteam').scrollIntoView({ behavior: 'smooth' })}>Team</a>
+            <a onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}>Contact</a>
           </div>
         </nav>
 
         {/* Hero Section */}
-        <div className="hero">
+        <div id='hero' className="hero">
           <div className="hero-text">
             <h2>
               Turn Stress, Boredom & Frustration Into <span>Unforgettable Experiences!</span>
@@ -28,7 +27,7 @@ function App() {
               experience emotions like never before. Step in, feel it, and leave recharged.
             </p>
             <div className="buttons">
-              <button className="btn-dark">How others use it →</button>
+              <button className="btn-dark" onClick={() => document.getElementById('emotion-rooms').scrollIntoView({ behavior: 'smooth' })}>Find a Room →</button>
               <button className="btn-yellow" onClick={() => document.getElementById('explore-section').scrollIntoView({ behavior: 'smooth' })}>
                 Explore Now!
               </button>
@@ -65,7 +64,7 @@ function App() {
         </div>
 
         {/* Enter. Explore. Experience Section */}
-        <section id="explore-section" className="text-center bg-white py-10 px-5">
+        <section id="explore-section" className="text-center py-10 px-5">
           <div className="position-relative">
             <h1 className="fw-bolder">
               Enter. <span className="text-warning">Explore.</span> Experience
@@ -100,7 +99,7 @@ function App() {
         </section>
 
         {/* Emotion Rooms Section */}
-<section className="emotion-rooms text-center py-5">
+<section id='emotion-rooms' className="emotion-rooms text-center py-5">
 <h2 className="fw-bold">
 <span style={{ color: "white" }}>Find a</span> <span style={{ color: "#F3A619" }}>Room</span> <span style={{ color: "white" }}>fit for your</span>  <span style={{ color: "#F3A619" }}>Emotion</span> <span style={{ color: "white" }}>!</span>
 </h2>
@@ -129,7 +128,7 @@ function App() {
   </div>
 </section>
 
-<div className='meetTheTeam'>
+<div id='meetteam' className='meetTheTeam'>
   <div className='header'>
     <h1>Meet the <span className='text-warning'>Team</span>!</h1>
   </div>
@@ -181,14 +180,14 @@ function App() {
 </div>
 
          {/* Testimonials Section */}
-         <div className="testimonials container my-5 text-center">
+         <div id='why-roomber' className="testimonials container my-5 text-center">
          <h2 className="fw-bold">
           <span style={{ color: "#F3A619" }}>Why</span> <span style={{ color: "black" }}>ROOMBER</span><span style={{ color: "#F3A619" }}>?</span> </h2>
           <div className="row mt-4">
             <div className="col-md-4">
               <div className="testimonial-box p-4 bg-black text-white rounded shadow">
                 <h2 className='para'>Seamless Stays, Endless Possibilities</h2>
-                <p>At Roomber, we redefine the way you experience stays. Whether you're traveling for business, leisure, or unique adventure, our diverse selection of rooms ensures you find the perfect space</p>
+                <p>At Roomber, we redefine the way you experience stays. Whether you&apos;re traveling for business, leisure, or unique adventure, our diverse selection of rooms ensures you find the perfect space</p>
               </div>
             </div>
             <div className="col-md-4">
@@ -209,7 +208,7 @@ function App() {
         {/* Call To Action Section */}
         <div className="cta-section text-center py-5"style={{ backgroundColor: "#F3A619"}} >
         <h2><strong>ROOMBER</strong></h2>
-          <p style={{ color: "white" }}>Step into a room you'll always remember</p>
+          <p style={{ color: "white" }}>Step into a room you&apos;ll always remember</p>
         </div>
         <div className="cta-section text-center py-5">
           <p>What are you waiting for?</p>
@@ -229,16 +228,16 @@ function App() {
             <div className="col-md-4 d-flex justify-content-between">
   <div>
     <h4><strong>About Us</strong></h4>
-    <p><a className="text-black">Why ROOMBER?</a></p>
+    <p><a onClick={() => document.getElementById('why-roomber').scrollIntoView({ behavior: 'smooth' })} className="text-black">Why ROOMBER?</a></p>
     <p><a className="text-black">Our Story</a></p>
   </div>
   <div>
     <h4><strong>Team</strong></h4>
-    <p><a href="#" className="text-black">Meet the Team</a></p>
+    <p><a onClick={() => document.getElementById('meetteam').scrollIntoView({ behavior: 'smooth' })} className="text-black">Meet the Team</a></p>
   </div>
 </div>
 
-              <div className="col-md-4">
+              <div id='contact' className="col-md-4">
                 <h4><strong>Contact</strong></h4>
                 <p>📍 Location: Toledo City</p>
                 <p>📧 Email: support@roomber.com</p>
