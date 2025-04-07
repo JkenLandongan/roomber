@@ -8,9 +8,6 @@ function Sad() {
             <div className="mt-4 d-flex justify-content-center">
             <div id="carouselExample" className="carousel slide">
                 <div className="carousel-inner">
-                  <div className="carousel-item active">
-                    <img src="src/assets/sadness.jpg" className="d-block w-100 h-100" alt="..." />
-                  </div>
                   <div className="carousel-item">
                     <img src="src/assets/sadnesss.jpg" className="d-block w-100 h-100" alt="..." />
                   </div>

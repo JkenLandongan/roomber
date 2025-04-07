@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import './App.css'; 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'; 
-import Booking from './components/booking'; // Adjust the path based on your project structure
+import Booking from './components/Booking';
 import JoyRooom from './components/JoyRoom';
 import Anger from './components/Anger';
 import Fear from './components/Fear';
@@ -162,12 +162,12 @@ function App() {
 <div className="roomber-hero">
   <div className="roomber-info">
     <div className="book-now">
-    <h2 style={{ fontSize: "4rem" }}>
-  <strong>
-    <span style={{ color: "white" }}>Book</span> <span style={{ color: "#F3A619" }}>Now</span>
-    <span style={{ color: "white" }}>!</span>
-  </strong>
-</h2>
+      <h2 style={{ fontSize: "4rem" }}>
+        <strong onClick={() => window.location.href = '/booking'}>
+          <span style={{ color: "white" }}>Book</span> <span style={{ color: "#F3A619" }}>Now</span>
+          <span style={{ color: "white" }}>!</span>
+        </strong>
+      </h2>
     </div>
 
     {/* New container inside roomber-hero but separate from book-now */}
@@ -186,10 +186,14 @@ function App() {
           <span className="location">🔴</span> 
           <span style={{ color: "white" }}> Closes at 08:00 pm</span>
         </p>
+        
+        <button className="btn-yellow" onClick={() => window.location.href = '/booking'}>
+                Book Now!
+        </button>
     </div>
     </div>
   </div>
-
+    
   <div className="roomber-display">
     <div className="circle"></div>
     <img src="src/assets/building.jpg" alt="Building" />
