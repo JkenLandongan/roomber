@@ -1,10 +1,28 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import './App.css'; 
+import { BrowserRouter, Routes, Route } from 'react-router-dom'; 
+import Booking from './components/booking'; // Adjust the path based on your project structure
+import JoyRooom from './components/JoyRoom';
+import Anger from './components/Anger';
+import Fear from './components/Fear';
+import Sad from './components/Sad';
 
 function App() {
   return (
+    
     <>
+    <BrowserRouter>
+      <>
+        <Routes>
+          <Route path="booking" element={<Booking />} />
+          <Route path="joyroom" element={<JoyRooom />} />
+          <Route path="anger" element={<Anger />} />
+          <Route path="fear" element={<Fear />} />
+          <Route path="sad" element={<Sad />} />
+        </Routes>
+      </>
+    </BrowserRouter>
       <div className="container-fluid" style={{ width: '100vw' }}>
         
         <nav className="navbar">
@@ -28,8 +46,8 @@ function App() {
             </p>
             <div className="buttons">
               <button className="btn-dark" onClick={() => document.getElementById('emotion-rooms').scrollIntoView({ behavior: 'smooth' })}>Find a Room →</button>
-              <button className="btn-yellow" onClick={() => document.getElementById('explore-section').scrollIntoView({ behavior: 'smooth' })}>
-                Explore Now!
+              <button className="btn-yellow" onClick={() => window.location.href = '/booking'}>
+                Book Now!
               </button>
             </div>
           </div>
@@ -105,22 +123,21 @@ function App() {
 </h2>
 
   <div className="d-flex flex-wrap justify-content-center mt-4">
-    <div className="room-card">
+    <div className="room-card" onClick={() => window.open('/JoyRoom', '_blank')}>
       <img src="src/assets/joy-room.jpg" className="room-image" alt="Joy Room" />
-      <span className="room-label joy"><span style={{ color: "#FFD700" }}>Joy</span> <span style={{ color: "white" }}>Room</span>
-  </span>
-</div>
-    <div className="room-card">
+      <span className="room-label joy"><span style={{ color: "#FFD700" }}>Joy</span> <span style={{ color: "white" }}>Room</span></span>
+    </div>
+    <div className="room-card" onClick={() => window.open('/Anger', '_blank')}>
       <img src="src/assets/anger-room.png" className="room-image" alt="Anger Room" />
       <span className="room-label anger"><span style={{ color: " #F91111" }}>Anger</span> <span style={{ color: "black" }}>Room</span>
   </span>
 </div>
-    <div className="room-card">
+    <div className="room-card" onClick={() => window.open('/Fear', '_blank')}>
       <img src="src/assets/illusion-room.jpg" className="room-image" alt="Fear Room" />
       <span className="room-label fear"><span style={{ color: "#B000B9" }}>Fear</span> <span style={{ color: "black" }}>Room</span>
   </span>
 </div>
-    <div className="room-card">
+    <div className="room-card" onClick={() => window.open('/Sad', '_blank')}>
       <img src="src/assets/sadnesss.jpg" className="room-image" alt="Sadness Room" />
       <span className="room-label sadness"><span style={{ color: "#88A9DA" }}>Sadness</span> <span style={{ color: "white" }}>Room</span>
   </span>
@@ -229,7 +246,7 @@ function App() {
   <div>
     <h4><strong>About Us</strong></h4>
     <p><a onClick={() => document.getElementById('why-roomber').scrollIntoView({ behavior: 'smooth' })} className="text-black">Why ROOMBER?</a></p>
-    <p><a className="text-black">Our Story</a></p>
+    <p><a onClick={() => document.getElementById('hero').scrollIntoView({ behavior: 'smooth' })} className="text-black">Our Story</a></p>
   </div>
   <div>
     <h4><strong>Team</strong></h4>
