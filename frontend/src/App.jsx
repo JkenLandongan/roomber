@@ -3,10 +3,12 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 import './App.css'; 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'; 
 import Booking from './components/Booking';
+
 import JoyRooom from './components/JoyRoom';
 import Anger from './components/Anger';
 import Fear from './components/Fear';
 import Sad from './components/Sad';
+import Admin from './components/Admin';
 
 function App() {
   return (
@@ -16,10 +18,12 @@ function App() {
       <>
         <Routes>
           <Route path="booking" element={<Booking />} />
+     
           <Route path="joyroom" element={<JoyRooom />} />
           <Route path="anger" element={<Anger />} />
           <Route path="fear" element={<Fear />} />
           <Route path="sad" element={<Sad />} />
+          <Route path="admin" element={<Admin />} />
         </Routes>
       </>
     </BrowserRouter>
@@ -89,7 +93,7 @@ function App() {
             </h1>
             <p className="text mt-2 text-lg max-w-xl mx-auto">
               Discover a selection of uniquely designed spaces, each offering a different atmosphere and experience.
-            </p>
+            </p>a
           </div>
           <div className="mt-4 d-flex justify-content-center">
             <div id="carouselExample" className="carousel slide">

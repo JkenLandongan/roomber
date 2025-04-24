@@ -12,8 +12,8 @@ app.use(bodyParser.json());
 // POST: Create Booking
 app.post('/bookings', async (req, res) => {
   try {
-    const { name, roomName, time, date } = req.body;
-    const booking = await Booking.create({ name, roomName, time, date });
+    const { name, roomName, date, time } = req.body;
+    const booking = await Booking.create({ name, roomName, date, time });
     res.status(201).json(booking);
   } catch (error) {
     res.status(500).json({ error: 'Failed to create booking', details: error.message });
