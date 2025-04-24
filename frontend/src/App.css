@@ -1,4 +1,4 @@
-/* General Styles */ 
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
@@ -9,7 +9,7 @@ body {
   margin: auto;
 }
 
-/* Navbar */
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -37,7 +37,7 @@ body {
   color: black;
 }
 
-/* Hero Section */
+
 .hero {
   display: flex;
   flex-wrap: wrap;
@@ -104,7 +104,7 @@ body {
   background-color: #F3A619;
 }
 
-/* Hero Images */
+
 .hero-images {
   position: relative;
   width: 10%;
@@ -112,26 +112,26 @@ body {
   justify-content: center;
 }
 
-/* Large Circle in Background */
+
 .hero-images::before {
   content: "";
   margin-right: 10px;
   position: absolute;
-  width: 780px; /* Adjust size for better coverage */
-  height: 1000px; /* Maintain full circular height */
-  background-color:  #F3A619; /* Light orange color */
-  border-top-left-radius: 50%; /* Creates a full circle */
+  width: 780px;
+  height: 1000px;
+  background-color:  #F3A619;
+  border-top-left-radius: 50%;
   border-bottom-left-radius: 60%;
   top: -50px;
   right: -7%;
-  z-index: -1; /* Keep it behind other elements */
-  clip-path: inset(50  50% 10% ); /* Cuts the right half of the circle */
+  z-index: -1;
+  clip-path: inset(50  50% 10% );
 }
 
 
 
 
-/* Image Grid */
+
 .image-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -154,9 +154,9 @@ body {
 }
 
 
-/* Statistics Section */
+
 .stats {
-  position: relative; /* Ensure it stays above other elements */
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -165,7 +165,7 @@ body {
   width: 50%;
   text-align: center;
   border-top-right-radius: 20px;
-  z-index: 120; /* Higher z-index to keep it in front */
+  z-index: 120;
 }
 
 .stat-box1 {
@@ -178,11 +178,11 @@ body {
   border-radius: 20px;
   background-color: black;
   color: white;
-  position: absolute; /* Absolute positioning to move it freely */
-  top: -100px; /* Moves it to the top */
-  left: 50%; /* Centers it horizontally */
-  transform: translateX(-50%); /* Ensures proper centering */
-  z-index: 50; /* Bring it to the very front */
+  position: absolute;
+  top: -100px;
+  left: 50%; 
+  transform: translateX(-50%);
+  z-index: 50;
 }
 
 .stat-box2 {
@@ -196,11 +196,11 @@ body {
   border-top-left-radius: 20px;
   background-color: black;
   color: white;
-  position: absolute; /* Allows free movement */
-  top: 40px; /* Moves it lower */
-  left: 50%; /* Centers it horizontally */
-  transform: translateX(-50%); /* Ensures proper centering */
-  z-index: -10; /* Sends it behind other elements */
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -10;
 }
 .stat-box2 h3 {
   margin-top: 20px;
@@ -232,8 +232,8 @@ body {
   color: white;
   padding: 20px;
   border-radius: 10px;
-  position: relative; /* Ensures proper layering */
-  z-index: 101; /* Higher than its parent for more prominence */
+  position: relative;
+  z-index: 101;
 }
 
 .emotion-rooms h2{
@@ -275,10 +275,10 @@ body {
 .joy {
   background-color: #1F2937;
   width: 50%;
-  display: inline-block; /* Ensures background color only covers text */
-  padding: 5px 10px; /* Adds spacing */
-  border-radius: 5px; /* Optional rounded edges */
-  text-align: center; /* Centers text */
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-align: center;
 }
 
 
@@ -329,9 +329,9 @@ body {
 }
 
 .team-container {
-  display: flex; /* Use flexbox for layout */
-  align-items: center; /* Center items vertically */
-  margin-left: 15%; /* Adjust as needed */
+  display: flex;
+  align-items: center;
+  margin-left: 15%;
   height: 500px;
   background-color: #f0f0f0;
 }
@@ -340,7 +340,7 @@ body {
   width: 450px;
   height: 350px;
   border-radius: 10px;
-  margin-right: 100px; /* Add some space between the image and the team section */
+  margin-right: 100px;
 }
 
 .team {
@@ -360,10 +360,10 @@ p {
   font-weight: bold;
   margin-top: 30px;
 }
-/* Booking Section */
+
 .roomber-hero {
   display: flex;
-  background-color: #f0f0f0; /* Example background color */
+  background-color: #f0f0f0;
   padding: 20px;
   
   border-radius: 10px;
@@ -381,7 +381,7 @@ p {
 }
 
 .book-now {
-  background-color: #1F2937; /* Example button color */
+  background-color: #1F2937;
   color: #F3A619;
   padding: 10px 20px;
   border-radius: 10px;
@@ -410,24 +410,24 @@ p {
 
 
 .location {
-  color: #e74c3c; /* Example location icon color */
+  color: #e74c3c;
   margin-right: 5px;
 }
 
 .open-status {
-  color: #27ae60; /* Example open status color */
+  color: #27ae60;
 }
 
 .close-status {
-  color: #e74c3c; /* Example close status color */
+  color: #e74c3c;
 }
 
 
 /* ... your existing CSS ... */
 
 .roomber-display {
-  width: 400px; /* Increased size */
-  height: 400px; /* Ensures a perfect square */
+  width: 400px;
+  height: 400px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -435,21 +435,21 @@ p {
 }
 
 .roomber-display img {
-  width: 100%; /* Make the image slightly smaller than the container */
+  width: 100%;
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
   position: relative;
-  z-index: 1; /* Ensures the image stays on top */
+  z-index: 1;
 }
 
 .roomber-details-container {
   display: flex;
-  justify-content: left; /* left inside container */
+  justify-content: left;
   align-items: center;
-  width: 33%; /* Ensure it spans the section */
+  width: 33%;
   padding: 20px;
-  background-color: black; /* Light background for visibility */
+  background-color: black;
   border-radius: 5%;
 
 }
@@ -459,17 +459,12 @@ p {
 
 .circle {
   position: absolute;
-  width: 105%; /* Make the circle larger than the image */
+  width: 105%;
   height: 105%;
   background-color:  #F3A619;
   border-radius: 50%;
-  z-index: 0; /* Places the circle behind the image */
+  z-index: 0;
 }
-
-
-/* end Booking Section */
-
-
 
 @media (max-width: 1024px) {
   .hero {

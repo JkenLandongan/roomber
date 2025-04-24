@@ -97,7 +97,7 @@ function Admin() {
           <div className="mb-4">
             <button
               onClick={handleSaveSelectedBookings}
-              className={`py-1 px-4 rounded ${selectedBookings.length === 0 ? "bg-gray-400 text-white cursor-not-allowed" : "bg-green-500 text-white hover:bg-green-600"}`}
+              className={`py-1 px-4 rounded ${selectedBookings.length === 0 ? "bg-gray-400 text-white cursor-not-allowed" : "bg-green-500 text-black hover:bg-green-600"}`}
               disabled={selectedBookings.length === 0}
             >
               Save

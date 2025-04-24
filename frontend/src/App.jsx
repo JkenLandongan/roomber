@@ -3,7 +3,6 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 import './App.css'; 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'; 
 import Booking from './components/Booking';
-
 import JoyRooom from './components/JoyRoom';
 import Anger from './components/Anger';
 import Fear from './components/Fear';
@@ -18,7 +17,6 @@ function App() {
       <>
         <Routes>
           <Route path="booking" element={<Booking />} />
-     
           <Route path="joyroom" element={<JoyRooom />} />
           <Route path="anger" element={<Anger />} />
           <Route path="fear" element={<Fear />} />
@@ -246,7 +244,7 @@ function App() {
             <div className="row ">
               <div className="col-md-4">
                 <h2><strong>ROOMBER</strong></h2>
-                <p>Stay updated with our latest experiences!</p>
+                <p>Don&apos;t miss the chance to experience Roomber at its best!</p>
                 <button className="btn btn-light mt-2 text-black">Book Now!</button>
               </div>
             <div className="col-md-4 d-flex justify-content-between">
