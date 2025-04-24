@@ -22,8 +22,27 @@ app.post('/bookings', async (req, res) => {
 
 // GET: Get All Bookings
 app.get('/bookings', async (req, res) => {
-  const bookings = await Booking.findAll();
-  res.json(bookings);
+  try {
+    const bookings = await Booking.findAll();
+    res.json(bookings);
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to fetch bookings', details: error.message });
+  }
+});
+
+// DELETE: Delete Booking by ID
+app.delete('/bookings/:id', async (req, res) => {
+  try {
+    const booking = await Booking.findByPk(req.params.id);
+    if (booking) {
+      await booking.destroy();
+      res.status(200).json({ message: 'Booking deleted successfully' });
+    } else {
+      res.status(404).json({ message: 'Booking not found' });
+    }
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to delete booking', details: error.message });
+  }
 });
 
 app.listen(PORT, () => {

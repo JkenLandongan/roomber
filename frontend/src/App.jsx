@@ -247,8 +247,7 @@ function App() {
               <div className="col-md-4">
                 <h2><strong>ROOMBER</strong></h2>
                 <p>Stay updated with our latest experiences!</p>
-                <input type="email" className="form-control" placeholder="Enter your email" />
-                <button className="btn btn-light mt-2 text-black">Subscribe</button>
+                <button className="btn btn-light mt-2 text-black">Book Now!</button>
               </div>
             <div className="col-md-4 d-flex justify-content-between">
   <div>
